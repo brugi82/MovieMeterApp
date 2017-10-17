@@ -1,3 +1,48 @@
-<p>
-  basic-search works!
-</p>
+<div style="-webkit-box-flex: 1;-ms-flex-positive: 1;flex-grow: 1;font-weight: 400;padding: 20px 70px 50px;    margin: 0 auto;
+max-width: 940px;">
+  <div class="page-title-container">
+      <h1 class="page-title">Basic Search</h1>
+  </div>
+  
+  <mat-card class="mat-card">
+      <mat-card-content class="mat-card-content">
+        <h2>Imdb Rating</h2>
+        <section class="basic-section">
+          <mat-slider style="width:300px" thumbLabel="true" min="0" max="10" step="0.1" value="7" tickInterval="10" [(ngModel)]="query.minRating"></mat-slider>
+          <mat-form-field >
+              <input readonly matInput placeholder="Minimum Imdb Rating" value={{query.minRating}}>
+          </mat-form-field>
+        </section>
+        <h2>Year</h2>
+        <section class="basic-section">
+          <mat-slider style="width:300px" thumbLabel="true" min="1900" max="2050" step="1" value="2017" tickInterval="10" [(ngModel)]="query.year"></mat-slider>
+          <mat-form-field >
+              <input readonly matInput placeholder="Minimum Program Year" value={{query.year}}>
+          </mat-form-field>
+        </section>
+        <h2>Genre</h2>
+        <section class="basic-section">
+          <mat-form-field>
+              <mat-select placeholder="No genre(s) selected" multiple>
+                <mat-option *ngFor="let genre of availableGenres">
+                  {{genre}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+        </section>
+        
+        <section class="basic-section">
+          <button mat-raised-button aria-haspopup="true" mattooltip="Search" class="mat-raised-button mat-primary" color="primary"
+                  (click)="search()">
+              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">search</mat-icon>
+              <span style="font-size: 1.5em;">Search</span>
+          </button> 
+          <div *ngIf="programCount">
+            {{programCount}}
+          </div>
+        </section>
+      </mat-card-content>
+  </mat-card>
+</div>
+
+

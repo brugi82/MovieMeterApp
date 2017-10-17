@@ -1,15 +1,14 @@
 <mat-toolbar color="primary" class="mat-elevation-z5">
-  <button mat-button [routerLink]="['/basic-search']">Home</button>
-  <button mat-button [routerLink]="['/advanced-search']">Advanced search</button>
+  <span>Movie Meter</span>
 
   <div class="flex-spacer"></div>
 
-  <span>Welcome</span>
-
+  <button mat-button [routerLink]="['/basic-search']">Home</button>
+  <button mat-button [routerLink]="['/advanced-search']">Advanced search</button>
   <button mat-icon-button aria-haspopup="true" mattooltip="Settings">
     <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">settings</mat-icon>
   </button>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<router-outlet ></router-outlet>
 
