@@ -34,3 +34,13 @@ h1, h2 {
     padding: 28px 8px;
     font-size: 20px;
 }
+
+.container{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-weight: 400;
+    padding: 20px 70px 50px;    
+    margin: 0 auto;
+    max-width: 940px;
+}

@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material';
 import { MatSliderModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material';
+import { MatProgressBarModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { MatSelectModule } from '@angular/material';
     MatListModule,
     MatSliderModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressBarModule
   ],
   exports: [
     MatToolbarModule,
@@ -29,7 +31,8 @@ import { MatSelectModule } from '@angular/material';
     MatListModule,
     MatSliderModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressBarModule
   ],
   declarations: []
 })

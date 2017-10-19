@@ -20,14 +20,18 @@ max-width: 940px;">
               <input readonly matInput placeholder="Minimum Program Year" value={{query.year}}>
           </mat-form-field>
         </section>
-        <h2>Genre</h2>
+        <h2>Additional options</h2>
         <section class="basic-section">
           <mat-form-field>
-              <mat-select placeholder="No genre(s) selected" multiple>
+              <mat-select placeholder="Genre(s)" multiple>
                 <mat-option *ngFor="let genre of availableGenres">
                   {{genre}}
                 </mat-option>
               </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="votesInput">
+              <input matInput placeholder="Minimum Imdb Votes" value={{query.minVotes}}>
           </mat-form-field>
         </section>
         
@@ -43,6 +47,9 @@ max-width: 940px;">
         </section>
       </mat-card-content>
   </mat-card>
+</div>
+<div *ngIf='programs'>
+  <app-program-list [programs]='programs'></app-program-list>
 </div>
 
 

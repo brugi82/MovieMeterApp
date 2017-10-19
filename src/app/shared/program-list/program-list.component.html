@@ -1,0 +1,31 @@
+<div *ngIf="programs" class="container" style="width:100%;">
+  <table>
+    <thead>
+      <tr>
+        <th>Poster</th>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Genre</th>
+        <!-- <th>Actors</th>
+        <th>Plot</th> -->
+        <th>Votes</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let program of programs">
+        <td><img src={{program.poster}} title={{program.title}} class="poster"></td>
+        <td class="text-cell">{{program.title}}</td>
+        <td class="text-cell">{{program.year}}</td>
+        <td class="text-cell">{{program.genre}}</td>
+        <!-- <td>{{program.actors}}</td>
+        <td>{{program.plot}}</td> -->
+        <td class="text-cell">{{program.imdbVotes}}</td>
+        <td class="text-cell">{{program.imdbRating}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <ng-template #noPrograms>
+  <h2>Search returned no results...</h2>
+</ng-template> -->

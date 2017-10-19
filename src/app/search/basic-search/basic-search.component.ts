@@ -1,3 +1,4 @@
+import { ProgramQueryFactory } from './../../shared/model/program-query.factory';
 import { IProgramQuery, ProgramQuery } from './../../shared/model/program-query';
 import { IProgram } from './../../shared/model/program';
 import { SearchService } from './../search.service';
@@ -30,9 +31,7 @@ export class BasicSearchComponent implements OnInit {
   constructor(private _searchService: SearchService) { }
 
   ngOnInit() {
-    this.query = new ProgramQuery();
-    this.query.minRating = 7;
-    this.query.year = 2010;
+    this.query = ProgramQueryFactory.getBasicSearchDefaultQuery();
   }
 
   search(): void {

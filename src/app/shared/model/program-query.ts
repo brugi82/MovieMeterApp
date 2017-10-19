@@ -8,6 +8,7 @@ export interface IProgramQuery {
     language: string;
     watched: boolean;
     onlyActive: boolean;
+    minVotes: number;
 }
 
 export class ProgramQuery implements IProgramQuery {
@@ -20,4 +21,5 @@ export class ProgramQuery implements IProgramQuery {
     language: string;
     watched: boolean;
     onlyActive: boolean;
+    minVotes: number;
 }

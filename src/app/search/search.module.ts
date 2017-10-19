@@ -1,3 +1,5 @@
+import { LoaderComponent } from './../shared/loader/loader.component';
+import { SharedModule } from './../shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularMaterialModule } from './../angular-material/angular-material.module';
@@ -11,8 +13,10 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
     CommonModule,
     AngularMaterialModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
-  declarations: [BasicSearchComponent, AdvancedSearchComponent]
+  declarations: [BasicSearchComponent, AdvancedSearchComponent],
+  exports: [AngularMaterialModule, SharedModule]
 })
 export class SearchModule { }

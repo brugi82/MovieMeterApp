@@ -1,3 +1,4 @@
+import { LoaderService } from './shared/loader/loader.service';
 import { SearchService } from './search/search.service';
 import { Component } from '@angular/core';
 
@@ -5,7 +6,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [SearchService]
+  providers: [SearchService, LoaderService]
 })
 export class AppComponent {
   title = 'app';
