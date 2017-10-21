@@ -1,3 +1,4 @@
+import { ProgramListComponent } from './../shared/program-list/program-list.component';
 import { LoaderComponent } from './../shared/loader/loader.component';
 import { SharedModule } from './../shared/shared.module';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,7 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
     FormsModule,
     SharedModule
   ],
-  declarations: [BasicSearchComponent, AdvancedSearchComponent],
-  exports: [AngularMaterialModule, SharedModule]
+  declarations: [BasicSearchComponent, AdvancedSearchComponent, ProgramListComponent],
+  exports: [AngularMaterialModule, SharedModule, ProgramListComponent]
 })
 export class SearchModule { }

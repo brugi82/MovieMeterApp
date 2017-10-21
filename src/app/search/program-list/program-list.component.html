@@ -15,7 +15,7 @@
     <tbody>
       <tr *ngFor="let program of programs">
         <td><img src={{program.poster}} title={{program.title}} class="poster"></td>
-        <td class="text-cell">{{program.title}}</td>
+        <td class="text-cell"><a [routerLink]="['/program', program.imdbId]">{{program.title}}</a></td>
         <td class="text-cell">{{program.year}}</td>
         <td class="text-cell">{{program.genre}}</td>
         <!-- <td>{{program.actors}}</td>

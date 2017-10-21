@@ -1,22 +1,24 @@
+import { AppRoutingModule } from './../app-routing.module';
 import { AngularMaterialModule } from './../angular-material/angular-material.module';
 import { LoaderService } from './loader/loader.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProgramListComponent } from './program-list/program-list.component';
 import { ProgramDetailsComponent } from './program-details/program-details.component';
 import { LoaderComponent } from './loader/loader.component';
+import { ProgramUserDataComponent } from './program-user-data/program-user-data.component';
 
 @NgModule({
   imports: [
     CommonModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    AppRoutingModule
   ],
   exports: [
-    ProgramListComponent,
     ProgramDetailsComponent,
     LoaderComponent,
-    AngularMaterialModule
+    AngularMaterialModule,
+    AppRoutingModule
   ],
-  declarations: [ProgramListComponent, ProgramDetailsComponent, LoaderComponent]
+  declarations: [ProgramDetailsComponent, LoaderComponent, ProgramUserDataComponent]
 })
 export class SharedModule { }

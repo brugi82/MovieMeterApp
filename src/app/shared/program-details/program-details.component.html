@@ -1,3 +1,21 @@
-<p>
-  program-details works!
-</p>
+<div style="-webkit-box-flex: 1;-ms-flex-positive: 1;flex-grow: 1;font-weight: 400;padding: 20px 70px 50px;    margin: 0 auto;
+max-width: 940px;" *ngIf="program">
+  <div class="page-title-container">
+      <h1 class="page-title">{{program.title}} ({{program.year}})</h1>
+      <h1 style="margin-left:auto;">{{program.imdbRating}} ({{program.imdbVotes}} votes)</h1>
+  </div>
+  
+  <mat-card class="mat-card">
+    <img class="details-poster" src={{program.poster}} alt={{program.title}}>
+    <mat-card-content>
+      <section>Director: {{program.director}}</section>
+      <section>Actors: {{program.actors}}</section>
+      <section>Year: {{program.year}}</section>
+      <section>Runtime: {{program.runtime}}</section>
+      <br>
+      <section>{{program.plot}}</section>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -34,22 +34,11 @@ max-width: 940px;">
               <input matInput placeholder="Minimum Imdb Votes" value={{query.minVotes}}>
           </mat-form-field>
         </section>
-        
-        <section class="basic-section">
-          <button mat-raised-button aria-haspopup="true" mattooltip="Search" class="mat-raised-button mat-primary" color="primary"
-                  (click)="search()">
-              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">search</mat-icon>
-              <span style="font-size: 1.5em;">Search</span>
-          </button> 
-          <div *ngIf="programCount">
-            {{programCount}}
-          </div>
-        </section>
+        <mat-card-actions>
+          <button mat-button (click)="search()"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">search</mat-icon>SEARCH</button>
+        </mat-card-actions>
       </mat-card-content>
   </mat-card>
-</div>
-<div *ngIf='programs'>
-  <app-program-list [programs]='programs'></app-program-list>
 </div>
 
 

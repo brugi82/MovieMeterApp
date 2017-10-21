@@ -19,7 +19,6 @@ import 'rxjs/Rx';
 export class SearchService {
     private _serviceUrl = 'http://localhost/MovieMeter.API/api/v1/Programs/Search';
     private _headers: HttpHeaders;
-    private _options: RequestOptions;
     constructor(private _http: HttpClient, private _loaderService: LoaderService) {
         this._headers = new HttpHeaders().append( 'Content-Type', 'application/json' );
     }
@@ -33,19 +32,6 @@ export class SearchService {
 
     getProgramCount(): Observable<number> {
         return this._http.get<number>(this._serviceUrl + 'Programs/Count');
-    }
-
-    private getSearchParams(programQuery: any): HttpParams {
-        let params: HttpParams = new HttpParams();
-
-        for (let key in programQuery) {
-            if (programQuery.hasOwnProperty(key)) {
-                let val = programQuery[key];
-                params = params.append(key, val);
-            }
-        }
-
-        return params;
     }
 
     private handleError(err: HttpErrorResponse) {
