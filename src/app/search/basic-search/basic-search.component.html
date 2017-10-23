@@ -23,8 +23,8 @@ max-width: 940px;">
         <h2>Additional options</h2>
         <section class="basic-section">
           <mat-form-field>
-              <mat-select placeholder="Genre(s)" multiple>
-                <mat-option *ngFor="let genre of availableGenres">
+              <mat-select placeholder="Genre(s)" [(ngModel)]="query.genre">
+                <mat-option *ngFor="let genre of availableGenres" [value]='genre'>
                   {{genre}}
                 </mat-option>
               </mat-select>

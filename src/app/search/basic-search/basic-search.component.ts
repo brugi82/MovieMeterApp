@@ -31,7 +31,7 @@ export class BasicSearchComponent implements OnInit {
   constructor(private _dataService: DataService, private _router: Router) { }
 
   ngOnInit() {
-    this.query = ProgramQueryFactory.getBasicSearchDefaultQuery();
+    this.query = this._dataService.query ? this._dataService.query : ProgramQueryFactory.getBasicSearchDefaultQuery();
   }
 
   search(): void {

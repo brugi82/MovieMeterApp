@@ -1,4 +1,3 @@
-import { ProgramListComponent } from './../shared/program-list/program-list.component';
 import { LoaderComponent } from './../shared/loader/loader.component';
 import { SharedModule } from './../shared/shared.module';
 import { FormsModule } from '@angular/forms';
@@ -8,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BasicSearchComponent } from './basic-search/basic-search.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
+import { ProgramListComponent } from './program-list/program-list.component';
 
 @NgModule({
   imports: [

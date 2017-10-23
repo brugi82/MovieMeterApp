@@ -1,31 +1,39 @@
-<div *ngIf="programs" class="container" style="width:100%;">
-  <table>
-    <thead>
-      <tr>
-        <th>Poster</th>
-        <th>Title</th>
-        <th>Year</th>
-        <th>Genre</th>
-        <!-- <th>Actors</th>
-        <th>Plot</th> -->
-        <th>Votes</th>
-        <th>Rating</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let program of programs">
-        <td><img src={{program.poster}} title={{program.title}} class="poster"></td>
-        <td class="text-cell"><a [routerLink]="['/program', program.imdbId]">{{program.title}}</a></td>
-        <td class="text-cell">{{program.year}}</td>
-        <td class="text-cell">{{program.genre}}</td>
-        <!-- <td>{{program.actors}}</td>
-        <td>{{program.plot}}</td> -->
-        <td class="text-cell">{{program.imdbVotes}}</td>
-        <td class="text-cell">{{program.imdbRating}}</td>
-      </tr>
-    </tbody>
-  </table>
+<div style="-webkit-box-flex: 1;-ms-flex-positive: 1;flex-grow: 1;font-weight: 400;padding: 20px 70px 50px;    margin: 0 auto;
+max-width: 940px;">
+  <div class="page-title-container">
+      <h1 class="page-title">Search results</h1>
+  </div>
+  <div *ngIf="programs" class="container" style="width:100%;">
+    <table style="width:100%;">
+      <thead>
+        <tr>
+          <th>Poster</th>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Genre</th>
+          <!-- <th>Actors</th>
+          <th>Plot</th> -->
+          <th>Votes</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let program of programs">
+          <td><img src={{program.poster}} title={{program.title}} class="poster"></td>
+          <td class="text-cell"><a [routerLink]="['/program', program.imdbId]">{{program.title}}</a></td>
+          <td class="text-cell">{{program.year}}</td>
+          <td class="text-cell">{{program.genre}}</td>
+          <!-- <td>{{program.actors}}</td>
+          <td>{{program.plot}}</td> -->
+          <td class="text-cell">{{program.imdbVotes}}</td>
+          <td class="text-cell">{{program.imdbRating}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <ng-template #noPrograms>
+    <h2>Search returned no results...</h2>
+  </ng-template> -->
 </div>
-<!-- <ng-template #noPrograms>
-  <h2>Search returned no results...</h2>
-</ng-template> -->
+
+

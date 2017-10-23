@@ -8,3 +8,7 @@
     margin-right: 5px;
     text-align: center;
 }
+
+.continer {
+    display: flex;
+}
